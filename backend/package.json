@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for my portfolio website",
+  "homepage": "https://github.com/DuttaNeel07/Portfolio_Neel#readme",
+  "bugs": {
+    "url": "https://github.com/DuttaNeel07/Portfolio_Neel/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DuttaNeel07/Portfolio_Neel.git"
+  },
+  "license": "ISC",
+  "author": "Neel Dutta",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "Backend is running",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.5.0"
+  }
+}

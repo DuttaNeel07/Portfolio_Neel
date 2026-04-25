@@ -1,18 +1,17 @@
 const express = require('express');
 const app = express();
 const connectDB = require('./config/db.js');
-const port = 3000;
+const port = 8000;
+const contactRoutes = require('./routes/contactRoutes');
+const projectRoutes = require('./routes/projectRoutes');
 
 connectDB();
 
-const corsOrigin = process.env.CORS_ORIGIN|| '*';
-
-app.use(express.json);
-app.use(require('cors')({
- origin: corsOrigin === '*' ? true : corsOrigin.split(','),
- credentials:true,
-}));
-
+const cors = require('cors');
+app.use(express.json());
+app.use(cors());
+app.use('/', contactRoutes);
+app.use('/', projectRoutes);
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })

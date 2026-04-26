@@ -10,7 +10,7 @@ function ProjectsPage() {
 
   const fetchProjects = async () => {
     try {
-      const res = await fetch("http://localhost:8000/project");
+      const res = await fetch("/api/project");
       const data = await res.json();
 
       console.log("API DATA:", data);

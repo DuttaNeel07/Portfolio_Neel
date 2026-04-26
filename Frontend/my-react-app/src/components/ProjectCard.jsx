@@ -1,27 +1,6 @@
-import React from "react";
-
-type Project = {
-  _id: string;
-  title: string;
-  description: string;
-  techStack?: string[];
-  link?: string;
-};
-
-type ProjectCardProps = {
-  project: Project;
-};
-
-function ProjectCard({ project }: ProjectCardProps) {
+function ProjectCard({ project }) {
   return (
-    <div
-      style={{
-        border: "1px solid #ccc",
-        padding: "10px",
-        marginBottom: "10px",
-        borderRadius: "8px",
-      }}
-    >
+    <div style={styles.card}>
       <h2>{project.title}</h2>
       <p>{project.description}</p>
 
@@ -39,5 +18,14 @@ function ProjectCard({ project }: ProjectCardProps) {
     </div>
   );
 }
+
+const styles = {
+  card: {
+    border: "1px solid #ccc",
+    padding: "15px",
+    marginBottom: "10px",
+    borderRadius: "8px",
+  },
+};
 
 export default ProjectCard;

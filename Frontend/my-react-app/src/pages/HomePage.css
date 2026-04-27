@@ -1,0 +1,172 @@
+/* ── Hero ─────────────────────────────────────────── */
+.hero {
+  padding: 40px 0 20px;
+}
+
+.hero-greeting {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.hero-name {
+  font-size: clamp(40px, 8vw, 64px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  color: var(--text-h);
+  margin-bottom: 8px;
+  line-height: 1.05;
+}
+
+.hero-title {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--accent);
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.hero-bio {
+  max-width: 580px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text);
+  white-space: pre-line;
+  margin-bottom: 32px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--text-h);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+.hero-socials {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  padding: 6px 0;
+  border-bottom: 1px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.social-link:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ── Divider ──────────────────────────────────────── */
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 48px 0;
+}
+
+/* ── Skills ───────────────────────────────────────── */
+.skills-section {
+  margin-bottom: 60px;
+}
+
+.skills-section h2 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.skills-sub {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ── Learning Cards ───────────────────────────────── */
+.learning-section h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+.learning-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.learning-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: border-color var(--transition);
+}
+
+.learning-card:hover {
+  border-color: var(--accent);
+}
+
+.learning-icon {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.learning-card h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-h);
+  margin-bottom: 8px;
+}
+
+.learning-card p {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--text);
+}

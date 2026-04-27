@@ -1,19 +1,12 @@
+import "./Footer.css";
+
 function Footer() {
   return (
-    <div style={styles.footer}>
-      <p>© 2026 Neel Dutta</p>
-      <p>Email: neel.dutta0729@gmail.com</p>
-    </div>
+    <footer className="footer">
+      <p>Built by <span>Neel Dutta</span> · 2026</p>
+      <p className="footer-email">neel.dutta0729@gmail.com</p>
+    </footer>
   );
 }
-
-const styles = {
-  footer: {
-    textAlign: "center",
-    padding: "15px",
-    background: "#222",
-    color: "white",
-  },
-};
 
 export default Footer;

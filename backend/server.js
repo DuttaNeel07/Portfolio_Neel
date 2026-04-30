@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const connectDB = require('./config/db.js');
-const port = 8000;
+const port = process.env.PORT || 10000;
 const contactRoutes = require('./routes/contactRoutes');
 const projectRoutes = require('./routes/projectRoutes');
 

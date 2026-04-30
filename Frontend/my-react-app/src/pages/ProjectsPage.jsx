@@ -2,23 +2,42 @@ import { useEffect, useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 import "./ProjectsPage.css";
 
-// ── Fallback projects shown when your backend isn't running ──
-// Replace these with your real projects, or leave them as placeholders
 const PLACEHOLDER_PROJECTS = [
   {
     _id: "1",
-    title: "Portfolio Website",
-    description: "My personal portfolio built with React and Vite. Displays my projects, skills, and a contact form connected to a Node.js backend.",
-    techStack: ["React", "JavaScript", "CSS", "Node.js"],
-    link: "https://github.com/DuttaNeel07/Portfolio_Neel",
+    title: "Fellowship Tracker",
+    description: "A platform to discover and track tech fellowships, hackathons, and contests with automated query generation and real-time updates.",
+    techStack: ["Python", "FastAPI", "MongoDB"],
+    link: "",
   },
   {
     _id: "2",
-    title: "Coming Soon",
-    description: "I'm actively working on new projects. Check back soon — or connect with me and let's build something together!",
-    techStack: ["???"],
-    link: "",
+    title: "PhishGuard",
+    description: "A phishing URL detection system that analyzes links using heuristics and security signals to identify malicious websites.",
+    techStack: ["Python", "FastAPI", "Cybersecurity"],
+    link: "https://github.com/DuttaNeel07/PhishGuard",
   },
+  {
+    _id: "3",
+    title: "Shawty (URL Shortener)",
+    description: "A scalable URL shortener with custom link generation, redirection handling, and basic analytics tracking.",
+    techStack: ["Node.js", "Express", "MongoDB", "REST API"],
+    link: "https://github.com/DuttaNeel07/Shawty",
+  },
+  {
+    _id: "4",
+    title: "TrackOps",
+    description: "An operations tracking system to monitor tasks, workflows, and progress with structured logging and analytics.",
+    techStack: ["React", "Node.js", "MongoDB", "Full Stack"],
+    link: "https://github.com/DuttaNeel07/TrackOps",
+  },
+  {
+    _id: "5",
+    title: "Portfolio Website",
+    description: "Personal portfolio with dynamic project fetching and backend-powered contact system for storing messages.",
+    techStack: ["React", "JavaScript", "CSS", "Node.js"],
+    link: "https://github.com/DuttaNeel07/Portfolio_Neel",
+  }
 ];
 
 function ProjectsPage() {
@@ -42,12 +61,10 @@ function ProjectsPage() {
       } else if (Array.isArray(data.projects) && data.projects.length > 0) {
         setProjects(data.projects);
       } else {
-        // Backend responded but with empty data — use placeholders
         setProjects(PLACEHOLDER_PROJECTS);
       }
 
     } catch (err) {
-      // Backend is likely not running — use placeholders silently
       console.info("Backend not reachable, showing placeholder projects.");
       setProjects(PLACEHOLDER_PROJECTS);
     } finally {

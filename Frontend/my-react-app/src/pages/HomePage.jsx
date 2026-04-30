@@ -2,25 +2,24 @@ import SkillBadge from "../components/SkillBadge";
 import { Link } from "react-router-dom";
 import "./HomePage.css";
 
-// ── Edit your info here ──────────────────────────────────────
 const MY_NAME = "Neel Dutta";
 const MY_TITLE = "Aspiring Developer";
-const MY_BIO = `Hey! I'm Neel — a developer just getting started on my journey.
+const MY_BIO = `Hey! I'm Neel, a developer just getting started on my journey.
 I enjoy building things for the web and I'm currently learning React, JavaScript,
 and backend development with Node.js. I'm always looking to grow, take on new
 challenges, and collaborate on interesting projects.`;
 
 const SKILLS = [
   "JavaScript", "React", "HTML", "CSS",
-  "Node.js", "Python", "Git", "MongoDB",
+  "Node.js", "Git", "MongoDB", "Docker",
 ];
 
 const SOCIAL_LINKS = [
   { label: "GitHub",   href: "https://github.com/DuttaNeel07" },
-  { label: "LinkedIn", href: "#" }, // replace # with your LinkedIn URL
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/engineel" }, 
   { label: "Email",    href: "mailto:neel.dutta0729@gmail.com" },
 ];
-// ────────────────────────────────────────────────────────────
+
 
 function HomePage() {
   return (

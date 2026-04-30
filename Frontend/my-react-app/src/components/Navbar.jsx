@@ -1,25 +1,31 @@
-import { Link, useLocation } from "react-router-dom";
-import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
-  const location = useLocation();
-
-  // Helper: adds "active" class if the current page matches the link
-  const isActive = (path) => location.pathname === path;
-
   return (
-    <nav className="navbar">
-      <Link to="/" className="navbar-logo">
-        Neel<span>.</span>
-      </Link>
+    <div style={styles.nav}>
+      <h3>My Portfolio</h3>
 
-      <div className="navbar-links">
-        <Link to="/"         className={isActive("/")         ? "nav-link active" : "nav-link"}>Home</Link>
-        <Link to="/projects" className={isActive("/projects") ? "nav-link active" : "nav-link"}>Projects</Link>
-        <Link to="/contact"  className={isActive("/contact")  ? "nav-link active" : "nav-link"}>Contact</Link>
+      <div>
+        <Link to="/" style={styles.link}>Projects</Link>
+        <Link to="/contact" style={styles.link}>Contact</Link>
       </div>
-    </nav>
+    </div>
   );
 }
+
+const styles = {
+  nav: {
+    display: "flex",
+    justifyContent: "space-between",
+    padding: "15px 30px",
+    background: "#222",
+    color: "white",
+  },
+  link: {
+    color: "white",
+    marginLeft: "15px",
+    textDecoration: "none",
+  },
+};
 
 export default Navbar;

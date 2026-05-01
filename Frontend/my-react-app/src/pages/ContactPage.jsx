@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./ContactPage.css";
+const API = import.meta.env.VITE_API_URL;
 
 function ContactPage() {
   const [name, setName]       = useState("");
@@ -19,7 +20,7 @@ function ContactPage() {
     setStatus(null);
 
     try {
-      const res = await fetch("http://localhost:8000/contact", {
+      const res = await fetch(`${API}/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, message }),

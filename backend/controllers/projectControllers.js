@@ -1,4 +1,4 @@
-const project = require('../models/Projects.js');
+const project = require('../models/projects');
 
 exports.showData = async (req, res) =>{
 

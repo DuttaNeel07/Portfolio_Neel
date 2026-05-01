@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 import "./ProjectsPage.css";
-
+const API = import.meta.env.VITE_API_URL;
 const PLACEHOLDER_PROJECTS = [
   {
     _id: "1",
@@ -50,7 +50,7 @@ function ProjectsPage() {
 
   const fetchProjects = async () => {
     try {
-      const res = await fetch("http://localhost:8000/project");
+      const res = await fetch(`${API}/project`);
 
       if (!res.ok) throw new Error("Server returned an error");
 
